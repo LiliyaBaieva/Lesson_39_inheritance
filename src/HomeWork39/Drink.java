@@ -21,4 +21,19 @@ public class Drink extends Food{
 //  для негазированного - "скр",
 //  а для алкогольного сначала спрашивает возраст и издаёт звук, только если возраст больше 18.
 
+  public void openDrink() throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    int age = Integer.parseInt(br.readLine());
+
+    // Я так поняла по условию:
+    // что это один напиток, который может быть алкогольным (или нет)
+    // и газированным (или нет)
+
+    if(age > 18){
+      String sound = gas ? "пшш" : "скр";
+      System.out.println(sound);
+    }
+  }
+
+
 }
